@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/c154a3672b.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Pathrise-front-end</title>
+  </head>
+  <body>
+    <div id="content-box">
+      <header>
+        <i class="far fa-star"></i>
+        <div class="heading">
+          <h1 class="heading__h1">wishlist</h1>
+          <p class="heading__p"><span id="numJobs">1</span> jobs</p>
+        </div>
+      </header>
+
+      <button id="add-job" type="button">+</button>
+
+      <ul class="jobs-list">
+        <li class="jobs-list__item">
+          <button
+            id="trash-icon"
+            type="button"
+            onclick="deleteJob(); maybeRemoveJob(event)"
+          >
+            &#10006;
+          </button>
+          <h2 class="jobs-list__item__h2">Pathrise</h2>
+          <p class="jobs-list__item__p">Web Developer</p>
+        </li>
+
+        <!--  <li class="jobs-list__item">
+          <button
+            id="trash-icon"
+            type="button"
+            onclick="deleteJob(); maybeRemoveJob(event)"
+          >
+            &#10006;
+          </button>
+          <h2 class="jobs-list__item__h2">Amazon</h2>
+          <p class="jobs-list__item__p">Data Scientist</p>
+        </li> -->
+      </ul>
+    </div>
+
+    <!-- Pop ups below here-->
+
+    <div id="popupBackground"></div>
+
+    <!--Create new job-->
+    <form id="form">
+      <button id="popupExit" type="button">&#10006;</button>
+      <h2 id="formH2">Add a job</h2>
+      <label for="company"></label>
+      <input
+        type="text"
+        id="company"
+        name="company"
+        placeholder="Company name"
+      />
+
+      <label for="position"></label>
+      <input
+        type="text"
+        id="position"
+        name="position"
+        placeholder="Job title"
+      />
+      <br /><button id="submitBtn" type="button">Continue</button>
+    </form>
+
+    <!--remove job-->
+    <div id="delete-job">
+      <h2 id="delete-job__h2">Delete Job</h2>
+      <p id="delete-job__p">Are you sure you want to delete this job?</p>
+      <button id="delete" type="button" onclick="removeJob(event)">
+        Delete
+      </button>
+      <button id="cancel" type="button" onclick="nvrMind()">Cancel</button>
+    </div>
+
+    <!-- <i class="fas fa-trash"></i> -->
+
+    <script src="main.js"></script>
+  </body>
+</html>

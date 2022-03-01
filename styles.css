@@ -1,197 +1,363 @@
+/* ---------Imports ---------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+/* font-family: 'Inria Serif', serif; */
+
 * {
   box-sizing: border-box;
   font-family: sans-serif;
+  box-sizing: border-box;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
-  scroll-padding-top: 10%;
+  width: 100%;
+  height: 100%;
+
+  /* border: 5px solid green; */
+
+  /* scroll-behavior: smooth;
+  scroll-padding-top: 10%; */
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.Inria {
+  font-family: "Inria Serif", serif;
 }
 
 /*------------Nav----------------*/
 
-#navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 75px;
-  background-color: #be3144;
-
-  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.45);
+nav {
+  min-height: 60px;
+  height: 14%;
   display: flex;
+  justify-content: right;
   align-items: center;
-  justify-content: flex-end;
-}
-
-.nav-links-box {
-  height: 100%;
-  width: 340px;
-  display: flex;
+  padding-right: 6%;
 }
 
 .nav-link {
-  color: #fff;
+  padding: 6px 0px;
+  margin: 0 10px;
+  color: black;
+  font-size: 1.1rem;
   text-decoration: none;
-  font-size: 24px;
-  height: 100%;
-  width: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .nav-link:hover {
-  background-color: #45567d;
+  border-bottom: 2px solid black;
 }
 
-/*------------Welcome section----------------*/
+/* ---------- HOME ----------  */
 
-#welcome-section {
+.landing_body {
+  display: flex;
   width: 100%;
-  margin-top: 0;
-  max-height: 100vh;
-  text-align: center;
-  background-image: linear-gradient(to top right, #3a3d40, #181719);
-  color: #fff;
-  padding-top: 40vh;
-  padding-bottom: 50vh;
+  height: 86%;
+  /* border: 1px solid black; */
 }
 
-#welcome-section h1 {
-  font-size: 65px;
+.landing_paragraph {
+  /* border: 1px solid black; */
+  width: 50%;
+  height: auto;
+
+  padding-left: 12%;
+  padding-top: 5%;
 }
 
-#welcome-section p {
-  color: #be3144;
-  font-style: italic;
-  font-size: 35px;
+.my_work_link {
+  /* border: 1px solid black; */
+  width: 50%;
+  height: 90%;
+  margin-left: 6%;
+
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
 }
 
-/*------------projects----------------*/
-
-#projects {
-  width: 100%;
-  background-color: #45567d;
-  padding: 20px 0;
+.my_work_link a {
+  text-decoration: none;
 }
 
-.project-header {
-  text-align: center;
-  color: #fff;
-  padding: 8px 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 70px;
-  max-width: 700px;
-  font-size: 45px;
+.my_work_link-text {
+  font-size: 1.4rem;
+  text-decoration: none;
+  padding-bottom: 5px;
+  color: rgb(78, 78, 78);
+
   border-bottom: 3px solid #fff;
 }
 
-.project-tiles-box {
-  columns: 400px 3;
-  column-gap: 30px;
-  row-gap: 30px;
-
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 0 20px;
+.my_work_link-text:hover {
+  border-bottom: 3px solid rgb(78, 78, 78);
 }
 
-img {
-  width: 100%;
-  max-height: 350px;
-  /* coffeeshop pic is 
-  slightly taller */
-}
+/*----------------WORK-----------*/
 
-.project-tile {
-  max-width: 400px;
-  height: 425px;
-  background-color: #3a3d40;
-  margin: 0 auto;
-  cursor: pointer;
-  box-shadow: 0.5px 0.5px 2px 0 black;
-  border-radius: 2px;
-  margin-bottom: 70px;
-  text-align: center;
-}
-
-.project-tile p {
-  display: inline-block;
-  margin-top: 18px;
-  color: #fff;
-  text-align: center;
-  font-size: 20px;
-  padding-bottom: 0.2rem;
-}
-
-.project-tile p:hover {
-  border-bottom: 2px solid #fff;
-  transition: 0.1s;
-}
-
-.project-tile a {
-  text-decoration: none;
-}
-
-/*------------Contact----------------*/
-
-#contact {
-  background-color: #3a3d40;
-  padding: 20% 0;
-  height: 80vh;
-  width: 100%;
+.work_body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.contact-links {
-  display: flex;
   align-items: center;
+  width: 100%;
+  max-height: 86%;
+
+  /* border: 1px solid black; */
+}
+
+.work_title {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 50px;
+  margin-bottom: 125px;
+}
+
+.work_links_container {
+  height: auto;
+  max-width: 1000px;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+
+  /* border: 1px solid black; */
+}
+
+.work_links_container a {
+  text-decoration: none;
+}
+
+.work_link-text {
+  font-size: 2.2rem;
+  font-weight: 400;
+  /* font-family: "Inria Serif"; */
+
+  padding-bottom: 3px;
+  color: rgb(78, 78, 78);
+
+  border-bottom: 3px solid #fff;
+}
+
+.work_link-text:hover {
+  border-bottom: 3px solid rgb(78, 78, 78);
+}
+
+/* -------- back_nav button----- */
+
+.back_nav_container {
+  position: absolute;
+  top: 42px;
+  left: 50px;
+}
+
+.back_nav {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: black;
+}
+
+.back_nav:hover {
+  border-bottom: 2px solid black;
+}
+
+/* .featured_project {
+  width: 50%;
+  height: 100%;
+  margin-left: 6%;
+} */
+
+/* ----------- ABOUT ----------- */
+
+.about_me_container {
+  padding: 5% 12%;
+  width: 100%;
+  height: auto;
+}
+
+.about_me_container p {
+  max-width: 750px;
+  font-size: 1.4rem;
+  /* letter-spacing: 1px; */
+  /* line-height: 20px; */
+}
+
+/* ----------- CONTACT --------- */
+
+.contact_container {
+  margin-top: 120px;
+  display: flex;
   justify-content: center;
-  padding: 0.6rem 0;
+  align-items: center;
+
+  /* border: 1px solid black; */
 }
 
-#contact h2 {
-  color: #fff;
+.contact_title_container {
   text-align: center;
-  font-size: 65px;
+  margin-top: 50px;
+
+  /* border: 1px solid black; */
 }
 
-#profile-link {
+.contact_title {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.contact_links {
+  font-size: 2.2rem;
+  font-weight: 400;
+  padding: 0 50px;
+  display: flex;
+}
+
+.profile_link {
+  text-decoration: none;
+  color: rgb(78, 78, 78);
+}
+
+/* -----------PROJECTS---------- */
+
+.projects_container {
+  /* padding: 5% 12%; */
+  /* width: 100%;  */
+
+  /* border: 1px solid black; */
+}
+
+.projects_title_container {
+  width: 85%;
+  margin: 0 auto;
+  padding-bottom: 15px;
+
+  /* border: 1px solid black; */
+}
+
+.project_tiles_container {
+  width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  grid-gap: 25px;
+  /* border: 1px solid black; */
+}
+
+.project_tile {
+  width: 300px;
+  height: 325px;
+  background-color: black;
+  cursor: pointer;
+  box-shadow: 0.5px 0.5px 2px 0 black;
+  border-radius: 5px;
+  text-align: center;
+  /* margin: 25px 0px; */
+
+  /* border: 1px solid black; */
+
+  /* display: inline-block; */
+}
+
+.project_tile_photo {
+  max-width: 260px;
+  max-height: 220px;
+  min-height: 200px;
+  object-fit: contain;
+  /* margin-top: -25px; */
+  margin-top: 20px;
+  /* negative margin bottom is for text positioning */
+  margin-bottom: -5px;
+  /* -------------- */
+
+  border-radius: 3px;
+}
+
+.project_tile a {
   text-decoration: none;
   color: #fff;
-  font-size: 30px;
-  padding: 0 5px;
+  font-size: 1.3rem;
 }
 
-ion-icon {
-  margin-right: 10px;
-  font-size: 40px;
-}
-
-/*------------Footer----------------*/
-
-.footer {
-  width: 100%;
-  max-height: 10%;
-  background-color: #3a3d40;
-  border-top: 5px solid #be3144;
-  padding: 2% 5%;
-  text-align: right;
-}
-
-.footer p {
-  color: #fff;
+.project_tile p {
+  padding-bottom: 15px;
 }
 
 /*--------------------Media Queries---------------*/
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 650px) {
+  .my_work_link {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .work_links_container {
+    flex-direction: column;
+    width: auto;
+  }
+  .work_link-text {
+    padding: 12px 0;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .contact_container {
+    flex-direction: column;
+  }
+
+  .contact_links {
+    padding: 20px 0;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .back_nav_container {
+    display: none;
+  }
+}
+
+/* -----Project tiles ------ */
+
+@media only screen and (max-width: 1150px) {
+  .project_tiles_container {
+    width: 625px;
+
+    grid-template-columns: 1fr 1fr;
+
+    /* border: 1px solid black; */
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .project_tiles_container {
+    width: 300px;
+
+    grid-template-columns: 1fr;
+
+    /* border: 1px solid black; */
+  }
+}
+
+/* @media only screen and (max-width: 740px) {
   .project-header {
     max-width: 590px;
     font-size: 38px;
@@ -220,4 +386,4 @@ ion-icon {
   .project-tile {
     height: 410px;
   }
-}
+}  */
